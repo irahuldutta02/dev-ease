@@ -22,6 +22,7 @@ const eslintConfig = [
       "@stylistic/semi": "off",
       "@stylistic/space-before-function-paren": "off",
       "@stylistic/jsx-quotes": "off",
+      "tailwindcss/no-custom-classname": "off",
       camelcase: "off",
       "no-undef": "error",
       "import/order": [
