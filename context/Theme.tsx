@@ -3,10 +3,13 @@ import {
   ThemeProviderProps,
 } from "next-themes";
 
-export const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
+export default function ThemeProvider({
+  children,
+  ...props
+}: ThemeProviderProps) {
   return (
     <>
       <NextThemeProvider {...props}>{children}</NextThemeProvider>
     </>
   );
-};
+}
