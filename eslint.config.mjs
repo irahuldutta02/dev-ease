@@ -2,8 +2,9 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 
 import { FlatCompat } from "@eslint/eslintrc";
+import js from "@eslint/js";
 import tailwind from "eslint-plugin-tailwindcss";
-import neostandard from "neostandard";
+import ts from "typescript-eslint";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -13,17 +14,12 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...neostandard(),
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  js.configs.recommended,
+  ...ts.configs.recommended,
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   ...tailwind.configs["flat/recommended"],
   {
     rules: {
-      "@stylistic/quotes": "off",
-      "@stylistic/semi": "off",
-      "@stylistic/space-before-function-paren": "off",
-      "@stylistic/jsx-quotes": "off",
-      "tailwindcss/no-custom-classname": "off",
-      camelcase: "off",
       "no-undef": "error",
       "import/order": [
         "error",

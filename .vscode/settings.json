@@ -3,7 +3,9 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.addMissingImports": "explicit"
+    "source.fixAll.tslint": "explicit",
+    "source.addMissingImports": "always",
+    "source.organizeImports": "never"
   },
   "prettier.tabWidth": 2,
   "prettier.useTabs": false,
