@@ -57,6 +57,9 @@ const eslintConfig = [
       ],
     },
   },
+  {
+    ignores: ["components/ui/**", "node_modules/**"],
+  },
 ];
 
 export default eslintConfig;
