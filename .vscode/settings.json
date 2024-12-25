@@ -5,6 +5,7 @@
     "source.fixAll.eslint": "explicit",
     "source.fixAll.tslint": "explicit",
     "source.addMissingImports": "always",
+    "source.removeUnusedImports": "always",
     "source.organizeImports": "never"
   },
   "prettier.tabWidth": 2,
